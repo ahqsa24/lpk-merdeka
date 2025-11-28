@@ -1,4 +1,4 @@
-import { AtomsShowcase } from "@/components/atoms/AtomsShowcase";
+import { AtomsShowcase } from "@/components/atoms/AtomShowcase";
 import { MoleculesShowcase } from "@/components/molecules/MoleculesShowcase";
 import { OrganismsShowcase } from "@/components/organisms/OrganismsShowcase";
 import { TemplateShowcase } from "@/components/template/TemplateShowcase";
