@@ -1,9 +1,8 @@
-import { Avatar } from "../atoms"
 import { Paragraph } from "../atoms"
 import { Heading } from "../atoms"
 
 interface CardWithAvatarProps {
-    icon: string;
+    icon?: React.ReactNode;
     title: string;
     description: string;
     className?: string;
@@ -11,7 +10,7 @@ interface CardWithAvatarProps {
 
 export const CardWithAvatar: React.FC<CardWithAvatarProps> = ({ icon, title, description, className }) => (
     <div className={`flex flex-row bg-white rounded-2xl p-6 items-center shadow-md **:${className}`}>
-        <div className="w-24 h-24 px-4 rounded-full flex items-center justify-center rounded-xl bg-red-600">
+        <div className="w-24 h-24 px-4 flex items-center justify-center rounded-xl bg-red-600">
             {icon}
         </div>
         <div className="px-4">

@@ -1,14 +1,12 @@
-import React from "react";
 import { AvatarWithName } from "./AvatarWithName";
 import { CardWithImage } from "./CardWithImage";
 import { FormField } from "./FormField";
 import { StatBox } from "./StatBox";
-import { TabsHeader } from "./TabsHeader";
 import { Heading } from "../atoms/Heading";
-import { Paragraph } from "../atoms/Paragraph";
 import { LineHeading } from "./LineHeading";
 import { TextGroup } from "./TextGroup";
 import { CardWithAvatar } from "./CardWithAvatar"
+import { BookOpen} from "lucide-react";
 
 export const MoleculesShowcase = () => (
   <div className="w-full space-y-8">
@@ -19,7 +17,7 @@ export const MoleculesShowcase = () => (
       <Heading level={3} className="text-xl mb-4">Card With Avatar</Heading>
       <div className="flex gap-8 flex-wrap">
         <CardWithAvatar 
-          src="/assets/Avatar.png"
+          icon={<BookOpen size={48} className="text-white"/>}
           title="Judul Card With Avatar" 
           className="object-contain"
           description="Ini adalah contoh CardWithAvatar component yang menampilkan avatar, judul, dan deskripsi."
