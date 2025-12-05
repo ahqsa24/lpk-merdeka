@@ -33,7 +33,7 @@ export default function MasonaryGalery() {
               <Image
                 src={src}
                 alt={`Galeri ${colIndex}-${imgIndex}`}
-                width={500}      // next/image membutuhkan width dan height
+                width={500} 
                 height={500}
                 className="h-auto max-w-full rounded-base object-cover"
               />

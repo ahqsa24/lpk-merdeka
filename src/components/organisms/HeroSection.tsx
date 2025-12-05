@@ -7,10 +7,6 @@ import Image from "next/image";
 
 export const HeroSection = () => (
   <section className="w-full flex flex-col items-center justify-center relative overflow-hidden">
-    {/* Background decorative circles */}
-    <div className="absolute top-10 right-10 w-80 h-80 bg-red-200 rounded-full opacity-20 blur-3xl"></div>
-    <div className="absolute bottom-20 left-0 w-96 h-96 bg-red-300 rounded-full opacity-10 blur-3xl"></div>
-
     {/* Content Container */}
     <div className="px-48 w-full min-h-screen flex flex-col items-start justify-center gap-6 relative z-10">
 
@@ -28,7 +24,7 @@ export const HeroSection = () => (
     </div>
 
     {/* Content */}
-    <div className="relative z-10 max-w-4xl">
+    <div className="relative max-w-4xl">
       <Heading level={6} className="text-5xl md:text-7xl font-bold text-red-600 mb-4">
         LPK PB Merdeka
       </Heading>

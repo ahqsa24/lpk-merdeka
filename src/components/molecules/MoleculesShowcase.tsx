@@ -26,7 +26,7 @@ export const MoleculesShowcase = () => (
     </div>
 
     {/* LineHeading Section */}
-    <div className="border rounded-lg p-6 bg-slate-50">
+    <div className="border rou   nded-lg p-6 bg-slate-50">
       <Heading level={3} className="text-xl mb-4">Line Heading</Heading>
       <div className="flex gap-8 flex-wrap">
         <LineHeading title="Molekul dengan Garis" lineClassName="w-16 h-1 bg-red-600" />
@@ -50,12 +50,14 @@ export const MoleculesShowcase = () => (
       <Heading level={3} className="text-xl mb-4">AvatarWithName</Heading>
       <div className="flex gap-8 flex-wrap">
         <AvatarWithName
-          src="https://via.placeholder.com/56"
-          name="John Doe"
+          src="/assets/Logo-Tab.png"
+          title="John Doe"
+          description="Software Engineer"
         />
         <AvatarWithName
           src="https://via.placeholder.com/56"
-          name="Jane Smith"
+          title="Jane Smith"
+          description="UI/UX Designer"
         />
       </div>
     </div>

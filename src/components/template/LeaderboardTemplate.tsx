@@ -3,7 +3,8 @@ import { LeaderboardTable } from "../organisms/LeaderboardTable";
 
 type LeaderboardData = {
   id: number;
-  name: string;
+  title: string;
+  description: string;
   avatar: string;
   score: number;
 };
@@ -13,7 +14,7 @@ type LeaderboardTemplateProps = {
 };
 
 export const LeaderboardTemplate = ({ data }: LeaderboardTemplateProps) => (
-  <main className="p-6 max-w-6xl mx-auto">
+  <main className="px-48 py-16 mx-auto">
     <LeaderboardTable data={data} />
   </main>
 );

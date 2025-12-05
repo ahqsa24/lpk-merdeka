@@ -4,12 +4,17 @@ import { Paragraph } from "../atoms/Paragraph";
 
 interface AvatarWithNameProps {
   src: string;
-  name: string;
+  title: string;
+  description: string;
+  className?: string;
 }
 
-export const AvatarWithName: React.FC<AvatarWithNameProps> = ({ src, name }) => (
-  <div className="flex flex-col items-center gap-2">
-    <Avatar src={src} size={56} />
-    <Paragraph className="font-medium text-center">{name}</Paragraph>
+export const AvatarWithName: React.FC<AvatarWithNameProps> = ({ src, title, description }) => (
+  <div className="flex flex-row gap-2">
+    <Avatar src={src} size={56} className="items-center"/>
+    <div className="flex flex-col">
+      <Paragraph className="font-bold text-xl">{title}</Paragraph>
+      <Paragraph variant="black" className="text-zinc-800/80 font-medium text-lg ">{description}</Paragraph>
+    </div>
   </div>
 );

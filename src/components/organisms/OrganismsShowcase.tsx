@@ -66,19 +66,22 @@ export const OrganismsShowcase = () => (
       <LeaderboardTable data={[
         {
           id: 1,
-          name: "Ahmad Rizki",
+          title: "Ahmad Rizki",
+          description: "Fullstack Developer",
           avatar: "https://via.placeholder.com/56",
           score: 950
         },
         {
           id: 2,
-          name: "Siti Nurhaliza",
+          title: "Siti Nurhaliza",
+          description: "Digital Marketer",
           avatar: "https://via.placeholder.com/56",
           score: 920
         },
         {
           id: 3,
-          name: "Budi Santoso",
+          title: "Budi Santoso",
+          description: "UI/UX Designer",
           avatar: "https://via.placeholder.com/56",
           score: 890
         }
