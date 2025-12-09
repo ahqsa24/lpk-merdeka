@@ -98,8 +98,8 @@ const SyllabusTimeline = () => {
     return (
         <div className="w-full max-w-6xl mx-auto p-4">
             <div className="mb-12 text-center">
-                <Heading className="text-4xl">Kurikulum Pelatihan</Heading>
-                <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+                <Heading className="text-4xl font-extrabold md:text-5xl ">Kurikulum Pelatihan</Heading>
+                <p className="text-gray-600 text-lg mt-4 max-w-2xl mx-auto">
                     Program intensif ini dirancang untuk membentuk Wakil Penasihat Berjangka yang kompeten dan profesional.
                 </p>
             </div>

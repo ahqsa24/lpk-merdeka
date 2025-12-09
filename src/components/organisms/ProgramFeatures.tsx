@@ -50,8 +50,8 @@ const ProgramFeatures = () => {
     return (
         <div className="w-full max-w-7xl mx-auto px-4 py-16">
             <div className="text-center mb-16">
-                <Heading className="text-4xl">Mengapa Memilih Program Kami?</Heading>
-                <Paragraph variant="gray" className="mt-4 max-w-2xl mx-auto">
+                <Heading className="text-4xl font-extrabold md:text-5xl">Mengapa Memilih Program Kami?</Heading>
+                <Paragraph variant="gray" className="mt-4 text-lg max-w-2xl mx-auto">
                     Dapatkan keunggulan kompetitif dengan fasilitas dan metode pembelajaran terbaik di industri.
                 </Paragraph>
             </div>
@@ -74,7 +74,7 @@ const ProgramFeatures = () => {
                         Bergabunglah dengan ribuan alumni sukses kami dan jadilah penasihat berjangka yang profesional.
                     </p>
                     <Link href="/auth/register">
-                        <Button variant="secondary" className="bg-white text-red-600 border-white hover:bg-gray-100 px-8 py-3 text-lg rounded-full">
+                        <Button variant="secondary" className="bg-white text-red-600 font-bold border-white hover:bg-gray-100 px-8 py-3 text-lg rounded-full">
                             Daftar Sekarang
                         </Button>
                     </Link>
