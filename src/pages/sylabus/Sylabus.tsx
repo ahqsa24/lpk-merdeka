@@ -1,10 +1,9 @@
 import React from 'react'
+import SyllabusTemplate from '@/components/template/SyllabusTemplate'
 
 const Sylabus = () => {
   return (
-    <div className="w-full min-h-screen">
-      Sylabus
-    </div>
+    <SyllabusTemplate />
   )
 }
 

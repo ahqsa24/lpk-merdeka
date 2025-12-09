@@ -1,3 +1,4 @@
+
 import type { AppProps } from "next/app";
 import { Poppins } from "next/font/google";
 import { Plus_Jakarta_Sans } from "next/font/google";
@@ -18,13 +19,16 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 import { ThemeProvider } from "@/context/ThemeContext";
+import { AuthProvider } from "@/context/AuthContext";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider>
-      <main className={`${plusJakartaSans.className}`}>
-        <Component {...pageProps} />
-      </main>
+      <AuthProvider>
+        <main className={`${plusJakartaSans.className} `}>
+          <Component {...pageProps} />
+        </main>
+      </AuthProvider>
     </ThemeProvider>
   );
 }

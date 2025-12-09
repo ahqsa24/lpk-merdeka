@@ -16,6 +16,9 @@ interface NavbarProps {
   onNavClick?: (id: string) => void;
   onLoginClick?: () => void;
   onRegisterClick?: () => void;
+  isAuthenticated?: boolean;
+  onLogoutClick?: () => void;
+  onDashboardClick?: () => void;
 }
 
 
@@ -26,6 +29,9 @@ export const Navbar: React.FC<NavbarProps> = ({
   onNavClick,
   onLoginClick,
   onRegisterClick,
+  isAuthenticated,
+  onLogoutClick,
+  onDashboardClick
 }) => {
   const [internalActiveNav, setInternalActiveNav] = useState(navItems[0]?.id);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -83,8 +89,17 @@ export const Navbar: React.FC<NavbarProps> = ({
           <button onClick={toggleTheme} className="p-2 rounded-full hover:bg-white/10 text-white transition-colors">
             {theme === 'dark' ? <FaSun /> : <FaMoon />}
           </button>
-          <NavBarButton label="Masuk" variant="ghost" onClick={onLoginClick} />
-          <NavBarButton label="Daftar" variant="secondary" onClick={onRegisterClick} />
+          {isAuthenticated ? (
+            <>
+              <NavBarButton label="User Login" variant="primary" onClick={onDashboardClick} />
+              <NavBarButton label="Logout" variant="ghost" onClick={onLogoutClick} />
+            </>
+          ) : (
+            <>
+              <NavBarButton label="Masuk" variant="ghost" onClick={onLoginClick} />
+              <NavBarButton label="Daftar" variant="secondary" onClick={onRegisterClick} />
+            </>
+          )}
         </div>
 
 
@@ -110,8 +125,17 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           ))}
 
-          <NavBarButton label="Login" variant="secondary" onClick={onLoginClick} />
-          <NavBarButton label="Daftar" variant="secondary" onClick={onLoginClick} />
+          {isAuthenticated ? (
+            <>
+              <NavBarButton label="Dashboard" variant="secondary" onClick={onDashboardClick} />
+              <NavBarButton label="Logout" variant="ghost" onClick={onLogoutClick} />
+            </>
+          ) : (
+            <>
+              <NavBarButton label="Login" variant="secondary" onClick={onLoginClick} />
+              <NavBarButton label="Daftar" variant="secondary" onClick={onRegisterClick} />
+            </>
+          )}
         </div>
       )}
     </nav>

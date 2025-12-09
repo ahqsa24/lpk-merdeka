@@ -3,9 +3,11 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { Navbar } from "../../components/organisms";
+import { useAuth } from "@/context/AuthContext";
 
 export default function LoginPage() {
     const router = useRouter();
+    const { login } = useAuth();
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const [loading, setLoading] = useState<boolean>(false);
@@ -29,9 +31,8 @@ export default function LoginPage() {
                 throw new Error(data?.message || "Login gagal, periksa email dan password.");
             }
 
-            // Save token and user info
-            localStorage.setItem("token", data.token);
-            localStorage.setItem("user", JSON.stringify(data.user));
+            // Save token and user info via context
+            login(data.token, data.user);
 
             console.log("Login berhasil");
             router.push("/dashboard");

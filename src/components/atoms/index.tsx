@@ -1,6 +1,5 @@
 export { Avatar } from "./Avatar";
 export { Button } from "./Button";
-export { Card } from "./Card";
 export { Heading } from "./Heading";
 export { Input } from "./Input";
 export { Label } from "./Label";
@@ -8,4 +7,3 @@ export { Line } from "./Line";
 export { NavBarButton } from "./NavBarButton";
 export { NavLink } from "./NavLink";
 export { Paragraph } from "./Paragraph";
-export { TextBackground } from "./TextBackground";

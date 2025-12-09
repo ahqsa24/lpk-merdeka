@@ -1,10 +1,9 @@
 import React from 'react'
+import ProgramTemplate from '@/components/template/ProgramTemplate'
 
 const Program = () => {
   return (
-    <div className="w-full min-h-screen">
-      Program
-    </div>
+    <ProgramTemplate />
   )
 }
 

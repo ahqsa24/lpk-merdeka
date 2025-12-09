@@ -2,8 +2,8 @@ import React from "react";
 import { Heading } from "../atoms";
 import { Paragraph } from "../atoms";
 import { Button } from "../atoms";
-import { TextBackground } from "../atoms";
 import Image from "next/image";
+import Link from "next/link";
 
 export const HeroSection = () => (
   <section className="w-full flex flex-col items-center justify-center relative overflow-hidden bg-white min-h-[90vh]">
@@ -43,12 +43,16 @@ export const HeroSection = () => (
         </Paragraph>
 
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4">
-          <Button variant="primary" className="px-8 py-4 text-lg shadow-lg shadow-red-200">
-            Daftar Program
-          </Button>
-          <Button variant="secondary" className="px-8 py-4 text-lg bg-white border border-gray-200 hover:bg-gray-50 text-gray-700">
-            Tentang Kami
-          </Button>
+          <Link href="/auth/register">
+            <Button variant="primary" className="px-8 py-4 text-lg shadow-lg shadow-red-200 bg-red-600 hover:bg-red-700 text-white w-full sm:w-auto justify-center">
+              Daftar Program
+            </Button>
+          </Link>
+          <Link href="/about">
+            <Button variant="secondary" className="px-8 py-4 text-lg bg-white border border-gray-200 hover:bg-gray-50 text-gray-700 w-full sm:w-auto justify-center">
+              Tentang Kami
+            </Button>
+          </Link>
         </div>
 
         <div className="flex items-center gap-4 mt-8 pt-6 border-t border-gray-100 w-full">

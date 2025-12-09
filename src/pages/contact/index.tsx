@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout } from "@/components/template/Layout";
-import FAQ from "./FAQ";
 import Head from "next/head";
+import ContactTemplate from "@/components/template/ContactTemplate";
 
 export default function ContactPage() {
     return (
@@ -10,7 +10,7 @@ export default function ContactPage() {
                 <title>Bantuan & FAQ | LPK PB Merdeka</title>
             </Head>
             <Layout>
-                <FAQ />
+                <ContactTemplate />
             </Layout>
         </>
     );
